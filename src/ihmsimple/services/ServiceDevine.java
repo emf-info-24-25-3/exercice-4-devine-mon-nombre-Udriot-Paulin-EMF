@@ -1,5 +1,7 @@
 package ihmsimple.services;
 
+import ihmsimple.ctrl.Controller;
+
 /**
  * Classe représentant le service de l'application MVC "IhmSimple".
  * 
@@ -8,6 +10,7 @@ package ihmsimple.services;
  * @version 1.0.0
  */
 public class ServiceDevine {
+    public static int NOMBRE_INVALIDE = 0;
     /**
      * Nombre maximum que l'utilisateur peut proposer.
      */

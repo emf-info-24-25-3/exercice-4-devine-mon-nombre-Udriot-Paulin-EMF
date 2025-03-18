@@ -1,5 +1,5 @@
+import ihmsimple.services.serviceDevine;
 package ihmsimple.ctrl;
-
 /**
  * Classe représentant le contrôleur de l'application MVC "IhmSimple".
  * 
@@ -11,7 +11,7 @@ public class Controller {
     /**
      * Le nombre courrant de l'utilisateur.
      */
-    // VOTRE CODE ICI...
+    int nombre;
 
     /**
      * Référence à la vue de l'application.
@@ -47,7 +47,9 @@ public class Controller {
      * Voir le diagramme de séquence pour l'implémentation de cette méthode.
      */
     public void actionDeviner() {
-        // VOTRE CODE ICI...
+        if (nombre != NOMBRE_INVALIDE) {
+            
+        }
     }
 
     /**
