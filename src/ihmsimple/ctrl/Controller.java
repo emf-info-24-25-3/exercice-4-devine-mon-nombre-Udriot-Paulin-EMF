@@ -1,5 +1,8 @@
-import ihmsimple.services.serviceDevine;
+
 package ihmsimple.ctrl;
+import ihmsimple.services.ServiceDevine;
+import ihmsimple.views.View;
+import java.awt.Color;
 /**
  * Classe représentant le contrôleur de l'application MVC "IhmSimple".
  * 
@@ -11,18 +14,17 @@ public class Controller {
     /**
      * Le nombre courrant de l'utilisateur.
      */
-    int nombre;
+    private int nombre;
 
-    /**
+    /*
      * Référence à la vue de l'application.
      */
-    // VOTRE CODE ICI...
-
+    private View refView;
     /**
      * Référence au serviceDevine de l'application.
      */
     // VOTRE CODE ICI...
-
+    private ServiceDevine refServiceDevine;
     /**
      * Constructeur du contrôleur. Comme toujours, le travail N°1 consiste à
      * initialiser TOUS nos attributs :-).
@@ -30,8 +32,10 @@ public class Controller {
      * qu’elles valeurs initiales donner. Pour la valeur initiale de l’attribut
      * nombre, utilisez NOMBRE_INVALIDE.
      */
-    public Controller() {
-        // VOTRE CODE ICI...
+    public Controller() {   
+        this.nombre = refServiceDevine.NOMBRE_INVALIDE;
+        this.refView = null;
+        this.refServiceDevine = null;
     }
 
     /**
@@ -39,7 +43,8 @@ public class Controller {
      * Voir le diagramme de séquence pour l'implémentation de cette méthode.
      */
     public void actionDemarrerNouveauJeu() {
-        // VOTRE CODE ICI...
+        nombre = refServiceDevine.penserAUnNombre();
+        refView.afficherStatus("Devinez !", Color.YELLOW);
     }
 
     /**
@@ -47,9 +52,11 @@ public class Controller {
      * Voir le diagramme de séquence pour l'implémentation de cette méthode.
      */
     public void actionDeviner() {
-        if (nombre != NOMBRE_INVALIDE) {
-            
+        if (nombre != refServiceDevine.NOMBRE_INVALIDE) {
+            int refView.lireValeurProposee();
+
         }
+        else if(refView.lireValeurProposee())
     }
 
     /**
